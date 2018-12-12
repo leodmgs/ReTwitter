@@ -10,7 +10,13 @@ import LBTAComponents
 
 class HomeDatasource: Datasource {
     
-    let data = ["DATA#1", "DATA#2", "DATA#3", "DATA#4", "DATA#5"]
+    let data = [
+        "Steve Jobs",
+        "Niel DeGrasse",
+        "Leonardo Domingues",
+        "Stephen Hawking",
+        "Elon Musk"
+    ]
     
     override func numberOfItems(_ section: Int) -> Int {
         return data.count
