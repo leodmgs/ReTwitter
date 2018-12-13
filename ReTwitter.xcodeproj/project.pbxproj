@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		78DD09E1488DBE68C4D5FE1E /* Pods_ReTwitterTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 16D8BA2E37772F443E620E27 /* Pods_ReTwitterTests.framework */; };
+		7A31617521C27E45001DB589 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A31617421C27E45001DB589 /* User.swift */; };
+		7A31617721C286A4001DB589 /* UserCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A31617621C286A4001DB589 /* UserCell.swift */; };
 		7A5C576B21BFF29300F6FDA5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A5C576A21BFF29300F6FDA5 /* AppDelegate.swift */; };
 		7A5C577321BFF29300F6FDA5 /* ReTwitter.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 7A5C577121BFF29300F6FDA5 /* ReTwitter.xcdatamodeld */; };
 		7A5C577521BFF29600F6FDA5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7A5C577421BFF29600F6FDA5 /* Assets.xcassets */; };
@@ -15,7 +17,7 @@
 		7A5C578321BFF29600F6FDA5 /* ReTwitterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A5C578221BFF29600F6FDA5 /* ReTwitterTests.swift */; };
 		7A5C578E21BFF29600F6FDA5 /* ReTwitterUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A5C578D21BFF29600F6FDA5 /* ReTwitterUITests.swift */; };
 		7A5C57A921C1346D00F6FDA5 /* HomeDatasourceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A5C57A821C1346D00F6FDA5 /* HomeDatasourceController.swift */; };
-		7A5C57B321C14CAE00F6FDA5 /* HomeCells.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A5C57B221C14CAE00F6FDA5 /* HomeCells.swift */; };
+		7A5C57B321C14CAE00F6FDA5 /* HeaderFooterCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A5C57B221C14CAE00F6FDA5 /* HeaderFooterCell.swift */; };
 		7A5C57B521C14CB500F6FDA5 /* HomeDatasource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A5C57B421C14CB500F6FDA5 /* HomeDatasource.swift */; };
 		BAE87BA74A73B1A7E48C5622 /* Pods_ReTwitter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D153F20AF9117DB30FAEF05 /* Pods_ReTwitter.framework */; };
 		BDDECEDA8B83AB9715E4DB89 /* Pods_ReTwitterUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3EF4D262CBBC263678389CDA /* Pods_ReTwitterUITests.framework */; };
@@ -44,6 +46,8 @@
 		455E2645101786EC2BB86576 /* Pods-ReTwitterTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReTwitterTests.release.xcconfig"; path = "Target Support Files/Pods-ReTwitterTests/Pods-ReTwitterTests.release.xcconfig"; sourceTree = "<group>"; };
 		54F0950CDD3157875B05085B /* Pods-ReTwitterUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReTwitterUITests.release.xcconfig"; path = "Target Support Files/Pods-ReTwitterUITests/Pods-ReTwitterUITests.release.xcconfig"; sourceTree = "<group>"; };
 		66A58530B12DF289D632B38A /* Pods-ReTwitterTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReTwitterTests.debug.xcconfig"; path = "Target Support Files/Pods-ReTwitterTests/Pods-ReTwitterTests.debug.xcconfig"; sourceTree = "<group>"; };
+		7A31617421C27E45001DB589 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		7A31617621C286A4001DB589 /* UserCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCell.swift; sourceTree = "<group>"; };
 		7A5C576721BFF29300F6FDA5 /* ReTwitter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ReTwitter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7A5C576A21BFF29300F6FDA5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7A5C577221BFF29300F6FDA5 /* ReTwitter.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ReTwitter.xcdatamodel; sourceTree = "<group>"; };
@@ -57,7 +61,7 @@
 		7A5C578D21BFF29600F6FDA5 /* ReTwitterUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReTwitterUITests.swift; sourceTree = "<group>"; };
 		7A5C578F21BFF29600F6FDA5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7A5C57A821C1346D00F6FDA5 /* HomeDatasourceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeDatasourceController.swift; sourceTree = "<group>"; };
-		7A5C57B221C14CAE00F6FDA5 /* HomeCells.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeCells.swift; sourceTree = "<group>"; };
+		7A5C57B221C14CAE00F6FDA5 /* HeaderFooterCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeaderFooterCell.swift; sourceTree = "<group>"; };
 		7A5C57B421C14CB500F6FDA5 /* HomeDatasource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeDatasource.swift; sourceTree = "<group>"; };
 		8D153F20AF9117DB30FAEF05 /* Pods_ReTwitter.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ReTwitter.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D1CAAB8AF7F2CD679895CCA9 /* Pods-ReTwitter.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReTwitter.debug.xcconfig"; path = "Target Support Files/Pods-ReTwitter/Pods-ReTwitter.debug.xcconfig"; sourceTree = "<group>"; };
@@ -152,6 +156,7 @@
 			isa = PBXGroup;
 			children = (
 				7A5C57B421C14CB500F6FDA5 /* HomeDatasource.swift */,
+				7A31617421C27E45001DB589 /* User.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -159,7 +164,8 @@
 		7A5C57AB21C135FC00F6FDA5 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				7A5C57B221C14CAE00F6FDA5 /* HomeCells.swift */,
+				7A5C57B221C14CAE00F6FDA5 /* HeaderFooterCell.swift */,
+				7A31617621C286A4001DB589 /* UserCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -422,9 +428,11 @@
 			files = (
 				7A5C57B521C14CB500F6FDA5 /* HomeDatasource.swift in Sources */,
 				7A5C576B21BFF29300F6FDA5 /* AppDelegate.swift in Sources */,
+				7A31617521C27E45001DB589 /* User.swift in Sources */,
 				7A5C57A921C1346D00F6FDA5 /* HomeDatasourceController.swift in Sources */,
-				7A5C57B321C14CAE00F6FDA5 /* HomeCells.swift in Sources */,
+				7A5C57B321C14CAE00F6FDA5 /* HeaderFooterCell.swift in Sources */,
 				7A5C577321BFF29300F6FDA5 /* ReTwitter.xcdatamodeld in Sources */,
+				7A31617721C286A4001DB589 /* UserCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
