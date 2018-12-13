@@ -1,0 +1,769 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		78DD09E1488DBE68C4D5FE1E /* Pods_ReTwitterTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 16D8BA2E37772F443E620E27 /* Pods_ReTwitterTests.framework */; };
+		7A5C576B21BFF29300F6FDA5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A5C576A21BFF29300F6FDA5 /* AppDelegate.swift */; };
+		7A5C577321BFF29300F6FDA5 /* ReTwitter.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 7A5C577121BFF29300F6FDA5 /* ReTwitter.xcdatamodeld */; };
+		7A5C577521BFF29600F6FDA5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7A5C577421BFF29600F6FDA5 /* Assets.xcassets */; };
+		7A5C577821BFF29600F6FDA5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7A5C577621BFF29600F6FDA5 /* LaunchScreen.storyboard */; };
+		7A5C578321BFF29600F6FDA5 /* ReTwitterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A5C578221BFF29600F6FDA5 /* ReTwitterTests.swift */; };
+		7A5C578E21BFF29600F6FDA5 /* ReTwitterUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A5C578D21BFF29600F6FDA5 /* ReTwitterUITests.swift */; };
+		7A5C57A921C1346D00F6FDA5 /* HomeDatasourceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A5C57A821C1346D00F6FDA5 /* HomeDatasourceController.swift */; };
+		7A5C57B321C14CAE00F6FDA5 /* HomeCells.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A5C57B221C14CAE00F6FDA5 /* HomeCells.swift */; };
+		7A5C57B521C14CB500F6FDA5 /* HomeDatasource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A5C57B421C14CB500F6FDA5 /* HomeDatasource.swift */; };
+		BAE87BA74A73B1A7E48C5622 /* Pods_ReTwitter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D153F20AF9117DB30FAEF05 /* Pods_ReTwitter.framework */; };
+		BDDECEDA8B83AB9715E4DB89 /* Pods_ReTwitterUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3EF4D262CBBC263678389CDA /* Pods_ReTwitterUITests.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		7A5C577F21BFF29600F6FDA5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7A5C575F21BFF29300F6FDA5 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7A5C576621BFF29300F6FDA5;
+			remoteInfo = ReTwitter;
+		};
+		7A5C578A21BFF29600F6FDA5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7A5C575F21BFF29300F6FDA5 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7A5C576621BFF29300F6FDA5;
+			remoteInfo = ReTwitter;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		16D8BA2E37772F443E620E27 /* Pods_ReTwitterTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ReTwitterTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3EF4D262CBBC263678389CDA /* Pods_ReTwitterUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ReTwitterUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		455E2645101786EC2BB86576 /* Pods-ReTwitterTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReTwitterTests.release.xcconfig"; path = "Target Support Files/Pods-ReTwitterTests/Pods-ReTwitterTests.release.xcconfig"; sourceTree = "<group>"; };
+		54F0950CDD3157875B05085B /* Pods-ReTwitterUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReTwitterUITests.release.xcconfig"; path = "Target Support Files/Pods-ReTwitterUITests/Pods-ReTwitterUITests.release.xcconfig"; sourceTree = "<group>"; };
+		66A58530B12DF289D632B38A /* Pods-ReTwitterTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReTwitterTests.debug.xcconfig"; path = "Target Support Files/Pods-ReTwitterTests/Pods-ReTwitterTests.debug.xcconfig"; sourceTree = "<group>"; };
+		7A5C576721BFF29300F6FDA5 /* ReTwitter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ReTwitter.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		7A5C576A21BFF29300F6FDA5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		7A5C577221BFF29300F6FDA5 /* ReTwitter.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ReTwitter.xcdatamodel; sourceTree = "<group>"; };
+		7A5C577421BFF29600F6FDA5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		7A5C577721BFF29600F6FDA5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		7A5C577921BFF29600F6FDA5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7A5C577E21BFF29600F6FDA5 /* ReTwitterTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ReTwitterTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		7A5C578221BFF29600F6FDA5 /* ReTwitterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReTwitterTests.swift; sourceTree = "<group>"; };
+		7A5C578421BFF29600F6FDA5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7A5C578921BFF29600F6FDA5 /* ReTwitterUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ReTwitterUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		7A5C578D21BFF29600F6FDA5 /* ReTwitterUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReTwitterUITests.swift; sourceTree = "<group>"; };
+		7A5C578F21BFF29600F6FDA5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7A5C57A821C1346D00F6FDA5 /* HomeDatasourceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeDatasourceController.swift; sourceTree = "<group>"; };
+		7A5C57B221C14CAE00F6FDA5 /* HomeCells.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeCells.swift; sourceTree = "<group>"; };
+		7A5C57B421C14CB500F6FDA5 /* HomeDatasource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeDatasource.swift; sourceTree = "<group>"; };
+		8D153F20AF9117DB30FAEF05 /* Pods_ReTwitter.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ReTwitter.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D1CAAB8AF7F2CD679895CCA9 /* Pods-ReTwitter.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReTwitter.debug.xcconfig"; path = "Target Support Files/Pods-ReTwitter/Pods-ReTwitter.debug.xcconfig"; sourceTree = "<group>"; };
+		E050E2BC157D28E064B8E67C /* Pods-ReTwitter.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReTwitter.release.xcconfig"; path = "Target Support Files/Pods-ReTwitter/Pods-ReTwitter.release.xcconfig"; sourceTree = "<group>"; };
+		E8051F7A377202026E6DDF3C /* Pods-ReTwitterUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReTwitterUITests.debug.xcconfig"; path = "Target Support Files/Pods-ReTwitterUITests/Pods-ReTwitterUITests.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		7A5C576421BFF29300F6FDA5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BAE87BA74A73B1A7E48C5622 /* Pods_ReTwitter.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7A5C577B21BFF29600F6FDA5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				78DD09E1488DBE68C4D5FE1E /* Pods_ReTwitterTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7A5C578621BFF29600F6FDA5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BDDECEDA8B83AB9715E4DB89 /* Pods_ReTwitterUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		7A5C575E21BFF29300F6FDA5 = {
+			isa = PBXGroup;
+			children = (
+				7A5C576921BFF29300F6FDA5 /* ReTwitter */,
+				7A5C578121BFF29600F6FDA5 /* ReTwitterTests */,
+				7A5C578C21BFF29600F6FDA5 /* ReTwitterUITests */,
+				7A5C576821BFF29300F6FDA5 /* Products */,
+				D24B814FB18F7A47D061F56A /* Pods */,
+				BC7071FE94BC71F166EC5A39 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		7A5C576821BFF29300F6FDA5 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				7A5C576721BFF29300F6FDA5 /* ReTwitter.app */,
+				7A5C577E21BFF29600F6FDA5 /* ReTwitterTests.xctest */,
+				7A5C578921BFF29600F6FDA5 /* ReTwitterUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		7A5C576921BFF29300F6FDA5 /* ReTwitter */ = {
+			isa = PBXGroup;
+			children = (
+				7A5C57AD21C1360B00F6FDA5 /* Controller */,
+				7A5C57AB21C135FC00F6FDA5 /* View */,
+				7A5C57AA21C135F600F6FDA5 /* Model */,
+				7A5C576A21BFF29300F6FDA5 /* AppDelegate.swift */,
+				7A5C577421BFF29600F6FDA5 /* Assets.xcassets */,
+				7A5C577621BFF29600F6FDA5 /* LaunchScreen.storyboard */,
+				7A5C577921BFF29600F6FDA5 /* Info.plist */,
+				7A5C577121BFF29300F6FDA5 /* ReTwitter.xcdatamodeld */,
+			);
+			path = ReTwitter;
+			sourceTree = "<group>";
+		};
+		7A5C578121BFF29600F6FDA5 /* ReTwitterTests */ = {
+			isa = PBXGroup;
+			children = (
+				7A5C578221BFF29600F6FDA5 /* ReTwitterTests.swift */,
+				7A5C578421BFF29600F6FDA5 /* Info.plist */,
+			);
+			path = ReTwitterTests;
+			sourceTree = "<group>";
+		};
+		7A5C578C21BFF29600F6FDA5 /* ReTwitterUITests */ = {
+			isa = PBXGroup;
+			children = (
+				7A5C578D21BFF29600F6FDA5 /* ReTwitterUITests.swift */,
+				7A5C578F21BFF29600F6FDA5 /* Info.plist */,
+			);
+			path = ReTwitterUITests;
+			sourceTree = "<group>";
+		};
+		7A5C57AA21C135F600F6FDA5 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				7A5C57B421C14CB500F6FDA5 /* HomeDatasource.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		7A5C57AB21C135FC00F6FDA5 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				7A5C57B221C14CAE00F6FDA5 /* HomeCells.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		7A5C57AD21C1360B00F6FDA5 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				7A5C57A821C1346D00F6FDA5 /* HomeDatasourceController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		BC7071FE94BC71F166EC5A39 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8D153F20AF9117DB30FAEF05 /* Pods_ReTwitter.framework */,
+				16D8BA2E37772F443E620E27 /* Pods_ReTwitterTests.framework */,
+				3EF4D262CBBC263678389CDA /* Pods_ReTwitterUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D24B814FB18F7A47D061F56A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D1CAAB8AF7F2CD679895CCA9 /* Pods-ReTwitter.debug.xcconfig */,
+				E050E2BC157D28E064B8E67C /* Pods-ReTwitter.release.xcconfig */,
+				66A58530B12DF289D632B38A /* Pods-ReTwitterTests.debug.xcconfig */,
+				455E2645101786EC2BB86576 /* Pods-ReTwitterTests.release.xcconfig */,
+				E8051F7A377202026E6DDF3C /* Pods-ReTwitterUITests.debug.xcconfig */,
+				54F0950CDD3157875B05085B /* Pods-ReTwitterUITests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		7A5C576621BFF29300F6FDA5 /* ReTwitter */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7A5C579221BFF29600F6FDA5 /* Build configuration list for PBXNativeTarget "ReTwitter" */;
+			buildPhases = (
+				FD49DA0DE9410D9F164AB96D /* [CP] Check Pods Manifest.lock */,
+				7A5C576321BFF29300F6FDA5 /* Sources */,
+				7A5C576421BFF29300F6FDA5 /* Frameworks */,
+				7A5C576521BFF29300F6FDA5 /* Resources */,
+				A3506E8367BB68CB357E235E /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ReTwitter;
+			productName = ReTwitter;
+			productReference = 7A5C576721BFF29300F6FDA5 /* ReTwitter.app */;
+			productType = "com.apple.product-type.application";
+		};
+		7A5C577D21BFF29600F6FDA5 /* ReTwitterTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7A5C579521BFF29600F6FDA5 /* Build configuration list for PBXNativeTarget "ReTwitterTests" */;
+			buildPhases = (
+				FA29E17624E653B06957BF26 /* [CP] Check Pods Manifest.lock */,
+				7A5C577A21BFF29600F6FDA5 /* Sources */,
+				7A5C577B21BFF29600F6FDA5 /* Frameworks */,
+				7A5C577C21BFF29600F6FDA5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				7A5C578021BFF29600F6FDA5 /* PBXTargetDependency */,
+			);
+			name = ReTwitterTests;
+			productName = ReTwitterTests;
+			productReference = 7A5C577E21BFF29600F6FDA5 /* ReTwitterTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		7A5C578821BFF29600F6FDA5 /* ReTwitterUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7A5C579821BFF29600F6FDA5 /* Build configuration list for PBXNativeTarget "ReTwitterUITests" */;
+			buildPhases = (
+				BD4E353433A911928EAAEF9D /* [CP] Check Pods Manifest.lock */,
+				7A5C578521BFF29600F6FDA5 /* Sources */,
+				7A5C578621BFF29600F6FDA5 /* Frameworks */,
+				7A5C578721BFF29600F6FDA5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				7A5C578B21BFF29600F6FDA5 /* PBXTargetDependency */,
+			);
+			name = ReTwitterUITests;
+			productName = ReTwitterUITests;
+			productReference = 7A5C578921BFF29600F6FDA5 /* ReTwitterUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		7A5C575F21BFF29300F6FDA5 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1010;
+				LastUpgradeCheck = 1010;
+				ORGANIZATIONNAME = "Leonardo Domingues";
+				TargetAttributes = {
+					7A5C576621BFF29300F6FDA5 = {
+						CreatedOnToolsVersion = 10.1;
+					};
+					7A5C577D21BFF29600F6FDA5 = {
+						CreatedOnToolsVersion = 10.1;
+						TestTargetID = 7A5C576621BFF29300F6FDA5;
+					};
+					7A5C578821BFF29600F6FDA5 = {
+						CreatedOnToolsVersion = 10.1;
+						TestTargetID = 7A5C576621BFF29300F6FDA5;
+					};
+				};
+			};
+			buildConfigurationList = 7A5C576221BFF29300F6FDA5 /* Build configuration list for PBXProject "ReTwitter" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 7A5C575E21BFF29300F6FDA5;
+			productRefGroup = 7A5C576821BFF29300F6FDA5 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				7A5C576621BFF29300F6FDA5 /* ReTwitter */,
+				7A5C577D21BFF29600F6FDA5 /* ReTwitterTests */,
+				7A5C578821BFF29600F6FDA5 /* ReTwitterUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		7A5C576521BFF29300F6FDA5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7A5C577821BFF29600F6FDA5 /* LaunchScreen.storyboard in Resources */,
+				7A5C577521BFF29600F6FDA5 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7A5C577C21BFF29600F6FDA5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7A5C578721BFF29600F6FDA5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		A3506E8367BB68CB357E235E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ReTwitter/Pods-ReTwitter-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/LBTAComponents/LBTAComponents.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/LBTAComponents.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ReTwitter/Pods-ReTwitter-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BD4E353433A911928EAAEF9D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ReTwitterUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FA29E17624E653B06957BF26 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ReTwitterTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FD49DA0DE9410D9F164AB96D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ReTwitter-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		7A5C576321BFF29300F6FDA5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7A5C57B521C14CB500F6FDA5 /* HomeDatasource.swift in Sources */,
+				7A5C576B21BFF29300F6FDA5 /* AppDelegate.swift in Sources */,
+				7A5C57A921C1346D00F6FDA5 /* HomeDatasourceController.swift in Sources */,
+				7A5C57B321C14CAE00F6FDA5 /* HomeCells.swift in Sources */,
+				7A5C577321BFF29300F6FDA5 /* ReTwitter.xcdatamodeld in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7A5C577A21BFF29600F6FDA5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7A5C578321BFF29600F6FDA5 /* ReTwitterTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7A5C578521BFF29600F6FDA5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7A5C578E21BFF29600F6FDA5 /* ReTwitterUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		7A5C578021BFF29600F6FDA5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7A5C576621BFF29300F6FDA5 /* ReTwitter */;
+			targetProxy = 7A5C577F21BFF29600F6FDA5 /* PBXContainerItemProxy */;
+		};
+		7A5C578B21BFF29600F6FDA5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7A5C576621BFF29300F6FDA5 /* ReTwitter */;
+			targetProxy = 7A5C578A21BFF29600F6FDA5 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		7A5C577621BFF29600F6FDA5 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7A5C577721BFF29600F6FDA5 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		7A5C579021BFF29600F6FDA5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		7A5C579121BFF29600F6FDA5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		7A5C579321BFF29600F6FDA5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D1CAAB8AF7F2CD679895CCA9 /* Pods-ReTwitter.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = G736GNRXH4;
+				INFOPLIST_FILE = ReTwitter/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.leodmgs.ReTwitter;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		7A5C579421BFF29600F6FDA5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E050E2BC157D28E064B8E67C /* Pods-ReTwitter.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = G736GNRXH4;
+				INFOPLIST_FILE = ReTwitter/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.leodmgs.ReTwitter;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		7A5C579621BFF29600F6FDA5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 66A58530B12DF289D632B38A /* Pods-ReTwitterTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = G736GNRXH4;
+				INFOPLIST_FILE = ReTwitterTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.leodmgs.ReTwitterTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ReTwitter.app/ReTwitter";
+			};
+			name = Debug;
+		};
+		7A5C579721BFF29600F6FDA5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 455E2645101786EC2BB86576 /* Pods-ReTwitterTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = G736GNRXH4;
+				INFOPLIST_FILE = ReTwitterTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.leodmgs.ReTwitterTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ReTwitter.app/ReTwitter";
+			};
+			name = Release;
+		};
+		7A5C579921BFF29600F6FDA5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E8051F7A377202026E6DDF3C /* Pods-ReTwitterUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = G736GNRXH4;
+				INFOPLIST_FILE = ReTwitterUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.leodmgs.ReTwitterUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = ReTwitter;
+			};
+			name = Debug;
+		};
+		7A5C579A21BFF29600F6FDA5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 54F0950CDD3157875B05085B /* Pods-ReTwitterUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = G736GNRXH4;
+				INFOPLIST_FILE = ReTwitterUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.leodmgs.ReTwitterUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = ReTwitter;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		7A5C576221BFF29300F6FDA5 /* Build configuration list for PBXProject "ReTwitter" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7A5C579021BFF29600F6FDA5 /* Debug */,
+				7A5C579121BFF29600F6FDA5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7A5C579221BFF29600F6FDA5 /* Build configuration list for PBXNativeTarget "ReTwitter" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7A5C579321BFF29600F6FDA5 /* Debug */,
+				7A5C579421BFF29600F6FDA5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7A5C579521BFF29600F6FDA5 /* Build configuration list for PBXNativeTarget "ReTwitterTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7A5C579621BFF29600F6FDA5 /* Debug */,
+				7A5C579721BFF29600F6FDA5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7A5C579821BFF29600F6FDA5 /* Build configuration list for PBXNativeTarget "ReTwitterUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7A5C579921BFF29600F6FDA5 /* Debug */,
+				7A5C579A21BFF29600F6FDA5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		7A5C577121BFF29300F6FDA5 /* ReTwitter.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				7A5C577221BFF29300F6FDA5 /* ReTwitter.xcdatamodel */,
+			);
+			currentVersion = 7A5C577221BFF29300F6FDA5 /* ReTwitter.xcdatamodel */;
+			path = ReTwitter.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 7A5C575F21BFF29300F6FDA5 /* Project object */;
+}
