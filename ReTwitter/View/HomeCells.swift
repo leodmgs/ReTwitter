@@ -10,9 +10,19 @@ import LBTAComponents
 
 class HomeHeaderCell: DatasourceCell {
     
+    let headerLabel: UILabel = {
+        let label = UILabel()
+        label.text = "WHO TO FOLLOW"
+        label.font = UIFont.systemFont(ofSize: 18)
+        return label
+    }()
+    
     override func setupViews() {
         super.setupViews()
-        backgroundColor = UIColor.blue
+        separatorLineView.isHidden = false
+        addSubview(separatorLineView)
+        addSubview(headerLabel)
+        headerLabel.anchor(self.topAnchor, left: self.leftAnchor, bottom: nil, right: nil, topConstant: 12, leftConstant: 12, bottomConstant: 0, rightConstant: 0, widthConstant: 0, heightConstant: 40)
     }
     
 }
@@ -73,11 +83,14 @@ class HomeDataCell: DatasourceCell {
     override func setupViews() {
         super.setupViews()
         
+        separatorLineView.isHidden = false
+        
         addSubview(profileImageView)
         addSubview(nameLabel)
         addSubview(usernameLabel)
         addSubview(bioTextView)
         addSubview(followButton)
+        addSubview(separatorLineView)
         
         profileImageView.anchor(self.topAnchor, left: self.leftAnchor, bottom: nil, right: nil, topConstant: 12, leftConstant: 12, bottomConstant: 0, rightConstant: 0, widthConstant: 50, heightConstant: 50)
         
@@ -95,9 +108,18 @@ class HomeDataCell: DatasourceCell {
 
 class HomeFooterCell: DatasourceCell {
     
+    let showMoreButton: UIButton = {
+        let button = UIButton()
+        button.setTitle("Show me more", for: .normal)
+        button.setTitleColor(UIColor(r: 0, g: 122, b: 255), for: .normal)
+        button.titleLabel?.font = UIFont.systemFont(ofSize: 15)
+        return button
+    }()
+    
     override func setupViews() {
         super.setupViews()
-        backgroundColor = UIColor.green
+        addSubview(showMoreButton)
+        showMoreButton.anchor(self.topAnchor, left: self.leftAnchor, bottom: nil, right: nil, topConstant: 20, leftConstant: 12, bottomConstant: 0, rightConstant: 0, widthConstant: 150, heightConstant: 20)
     }
     
 }
