@@ -22,11 +22,22 @@ class HomeDatasourceController: DatasourceController {
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForFooterInSection section: Int) -> CGSize {
-        return CGSize(width: view.frame.width, height: 100)
+        return CGSize(width: view.frame.width, height: 60)
     }
     
     override func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: view.frame.width, height: 150)
+        if let userCell = datasource?.item(indexPath) as? User {
+            let userTextBioWidth = view.frame.width - 82
+            let size = CGSize(width: userTextBioWidth, height: 500)
+            let fontAttributes = [NSAttributedString.Key.font: UIFont.systemFont(ofSize: 15)]
+            let boundingBoxSize = NSString(string: userCell.bio).boundingRect(with: size, options: .usesLineFragmentOrigin, attributes: fontAttributes, context: nil)
+            return CGSize(width: view.frame.width, height: boundingBoxSize.height + 70)
+        }
+        return CGSize(width: view.frame.width, height: 200)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+        return 0
     }
     
 }
