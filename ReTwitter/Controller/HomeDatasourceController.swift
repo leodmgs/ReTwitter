@@ -29,9 +29,9 @@ class HomeDatasourceController: DatasourceController {
         if let userCell = datasource?.item(indexPath) as? User {
             let userTextBioWidth = view.frame.width - 82
             let size = CGSize(width: userTextBioWidth, height: 500)
-            let fontAttributes = [NSAttributedString.Key.font: UIFont.systemFont(ofSize: 15)]
+            let fontAttributes = [NSAttributedString.Key.font: UIFont.systemFont(ofSize: 16)]
             let boundingBoxSize = NSString(string: userCell.bio).boundingRect(with: size, options: .usesLineFragmentOrigin, attributes: fontAttributes, context: nil)
-            return CGSize(width: view.frame.width, height: boundingBoxSize.height + 70)
+            return CGSize(width: view.frame.width, height: boundingBoxSize.height + 66)
         }
         return CGSize(width: view.frame.width, height: 200)
     }
