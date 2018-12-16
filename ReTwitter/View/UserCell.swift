@@ -45,10 +45,12 @@ class UserCell: DatasourceCell {
         button.setTitle("Follow", for: .normal)
         button.setTitleColor(twitterColorBlue, for: .normal)
         button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 14)
-        button.setImage(UIImage(named: "follow-icon"), for: .normal)
-        button.imageView?.contentMode = .scaleAspectFit
-        button.imageEdgeInsets = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 5)
-        button.titleEdgeInsets = UIEdgeInsets(top: 0, left: -20, bottom: 0, right: 0)
+        
+        let imageView = UIImageView(frame: CGRect(x: 15, y: 4, width: 32, height: 32))
+        imageView.image = UIImage(named: "follow")
+        button.addSubview(imageView)
+        
+        button.titleEdgeInsets = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: -30)
         return button
     }()
     
