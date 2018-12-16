@@ -12,9 +12,17 @@ class HomeDatasourceController: DatasourceController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        setNavigationBarItems()
         let homeDatasource = HomeDatasource()
         self.datasource = homeDatasource
+    }
+    
+    private func setNavigationBarItems() {
+        let titleImageView = UIImageView(image: UIImage(named: "twitter"))
+        titleImageView.widthAnchor.constraint(equalToConstant: 32.0).isActive = true
+        titleImageView.heightAnchor.constraint(equalToConstant: 32.0).isActive = true
+        titleImageView.contentMode = .scaleAspectFit
+        navigationItem.titleView = titleImageView
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
