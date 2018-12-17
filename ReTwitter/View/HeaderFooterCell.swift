@@ -19,8 +19,9 @@ class HeaderCell: DatasourceCell {
     
     override func setupViews() {
         super.setupViews()
+        backgroundColor = .white
         separatorLineView.isHidden = false
-        separatorLineView.backgroundColor = UIColor(r: 230, g: 230, b: 230)
+        separatorLineView.backgroundColor = UIColor(r: 232, g: 236, b: 241)
         addSubview(headerLabel)
         headerLabel.anchor(self.topAnchor, left: self.leftAnchor, bottom: nil, right: nil, topConstant: 12, leftConstant: 12, bottomConstant: 0, rightConstant: 0, widthConstant: 0, heightConstant: 40)
     }
@@ -39,6 +40,7 @@ class FooterCell: DatasourceCell {
     
     override func setupViews() {
         super.setupViews()
+        backgroundColor = .white
         addSubview(showMoreButton)
         showMoreButton.anchor(self.topAnchor, left: self.leftAnchor, bottom: nil, right: nil, topConstant: 20, leftConstant: 12, bottomConstant: 0, rightConstant: 0, widthConstant: 150, heightConstant: 20)
     }
