@@ -40,9 +40,16 @@ class FooterCell: DatasourceCell {
     
     override func setupViews() {
         super.setupViews()
-        backgroundColor = .white
-        addSubview(showMoreButton)
-        showMoreButton.anchor(self.topAnchor, left: self.leftAnchor, bottom: nil, right: nil, topConstant: 20, leftConstant: 12, bottomConstant: 0, rightConstant: 0, widthConstant: 150, heightConstant: 20)
+        
+        let subview = UIView()
+        subview.backgroundColor = .white
+        subview.addSubview(showMoreButton)
+        
+        addSubview(subview)
+        subview.anchor(self.topAnchor, left: self.leftAnchor, bottom: self.bottomAnchor, right: self.rightAnchor, topConstant: 0, leftConstant: 0, bottomConstant: 20, rightConstant: 0, widthConstant: 0, heightConstant: 0)
+        
+        // it must to be set at this place once that the subview needs to be anchored to a view.
+        showMoreButton.anchor(subview.topAnchor, left: subview.leftAnchor, bottom: subview.bottomAnchor, right: subview.rightAnchor, topConstant: 10, leftConstant: 10, bottomConstant: 10, rightConstant: 10, widthConstant: 0, heightConstant: 0)
     }
     
 }

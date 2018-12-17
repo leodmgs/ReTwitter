@@ -21,6 +21,7 @@ class HomeDatasourceController: DatasourceController {
     private func setNavigationBarItems() {
         if let navBar = navigationController?.navigationBar {
             navBar.barTintColor = UIColor.white
+            navBar.isTranslucent = false
         }
         setBarTitleView()
         setLeftBarButtonItem()
@@ -28,11 +29,14 @@ class HomeDatasourceController: DatasourceController {
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
-        return CGSize(width: view.frame.width, height: 60)
+        if section == 0 {
+            return CGSize(width: view.frame.width, height: 60)
+        }
+        return CGSize(width: view.frame.width, height: 0)
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForFooterInSection section: Int) -> CGSize {
-        return CGSize(width: view.frame.width, height: 60)
+        return CGSize(width: view.frame.width, height: 75)
     }
     
     override func collectionView(_ collectionView: UICollectionView, willDisplaySupplementaryView view: UICollectionReusableView, forElementKind elementKind: String, at indexPath: IndexPath) {
