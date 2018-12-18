@@ -12,14 +12,25 @@ class HomeDatasource: Datasource {
     
     let users: [User] = {
         let steve = User(profileImage: UIImage(named: "steve-jobs")!, name: "Steve Jobs", username: "@stevejobs", bio: "Design is not just what it looks like and feels like. Design is how it works.\nInnovation distinguishes between a leader and a follower.")
-        //let leonardo = User(profileImage: UIImage(named: "leonardo-domingues")!, name: "Leonardo Domingues", username: "@leodmgs", bio: "Lorem ipsum dolor sit amet, consectetur adipisicing elit.")
-        //let neil = User(profileImage: UIImage(named: "neil-degrasse")!, name: "Neil deGrasse", username: "@neildegrasse", bio: "The good thing about science is that it's true whether or not you believe in it. We are part of this universe; we are in this universe, but perhaps more important than both of those facts, is that the universe is in us.")
+        
         let stephen = User(profileImage: UIImage(named: "stephen-hawking")!, name: "Stephen Hawking", username: "@stephenhawking", bio: "Life would be tragic if it weren't funny.I have noticed even people who claim everything is predestined, and that we can do nothing to change it, look before they cross the road.")
+        
         let elon = User(profileImage: UIImage(named: "elon-musk")!, name: "Elon Musk", username: "@elonmusk", bio: "When something is important enough, you do it even if the odds are not in your favor.")
+        
         return [steve, stephen, elon]
     }()
     
-    let tweets: [String] = ["tweet #1", "tweet #2", "tweet #3"]
+    let tweets: [Tweet] = {
+        let leonardo = User(profileImage: UIImage(named: "leonardo-domingues")!, name: "Leonardo Domingues", username: "@leodmgs", bio: "")
+        let message1 = "The report adds new details to the portrait that has emerged over the last two years of the energy and imagination of the Russian effort to sway American opinion and divide the country, which the authors said continues to this day."
+        let tweet1 = Tweet(user: leonardo, message: message1)
+        
+        let neil = User(profileImage: UIImage(named: "neil-degrasse")!, name: "Neil deGrasse", username: "@neildegrasse", bio: "")
+        let message2 = "The second report was written by the Computational Propaganda Project at Oxford University along with Graphika, a company that specializes in analyzing social media. The Washington Post first reported on the Oxford report on Sunday."
+        let tweet2 = Tweet(user: neil, message: message2)
+        
+        return [tweet1, tweet2]
+    }()
     
     override func numberOfItems(_ section: Int) -> Int {
         return section == 0 ? users.count : tweets.count
@@ -30,7 +41,14 @@ class HomeDatasource: Datasource {
     }
     
     override func item(_ indexPath: IndexPath) -> Any? {
-        return users[indexPath.item]
+        switch indexPath.section {
+        case 0:
+            return users[indexPath.item]
+        case 1:
+            return tweets[indexPath.item]
+        default:
+            return []
+        }
     }
     
     override func cellClasses() -> [DatasourceCell.Type] {

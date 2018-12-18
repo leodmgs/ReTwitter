@@ -6,4 +6,14 @@
 //  Copyright © 2018 Leonardo Domingues. All rights reserved.
 //
 
-import Foundation
+import LBTAComponents
+
+struct Tweet {
+    let user: User
+    let message: String
+    
+    init(user: User, message: String) {
+        self.user = user
+        self.message = message
+    }
+}

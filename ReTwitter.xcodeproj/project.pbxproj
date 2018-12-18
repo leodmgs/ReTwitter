@@ -12,6 +12,7 @@
 		7A31617721C286A4001DB589 /* UserCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A31617621C286A4001DB589 /* UserCell.swift */; };
 		7A31617921C61686001DB589 /* HomeDatasourceController+navbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A31617821C61686001DB589 /* HomeDatasourceController+navbar.swift */; };
 		7A31623221C7EBB5001DB589 /* TweetCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A31623121C7EBB5001DB589 /* TweetCell.swift */; };
+		7A31623421C8898F001DB589 /* Tweet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A31623321C8898F001DB589 /* Tweet.swift */; };
 		7A5C576B21BFF29300F6FDA5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A5C576A21BFF29300F6FDA5 /* AppDelegate.swift */; };
 		7A5C577321BFF29300F6FDA5 /* ReTwitter.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 7A5C577121BFF29300F6FDA5 /* ReTwitter.xcdatamodeld */; };
 		7A5C577521BFF29600F6FDA5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7A5C577421BFF29600F6FDA5 /* Assets.xcassets */; };
@@ -52,6 +53,7 @@
 		7A31617621C286A4001DB589 /* UserCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCell.swift; sourceTree = "<group>"; };
 		7A31617821C61686001DB589 /* HomeDatasourceController+navbar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HomeDatasourceController+navbar.swift"; sourceTree = "<group>"; };
 		7A31623121C7EBB5001DB589 /* TweetCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TweetCell.swift; sourceTree = "<group>"; };
+		7A31623321C8898F001DB589 /* Tweet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tweet.swift; sourceTree = "<group>"; };
 		7A5C576721BFF29300F6FDA5 /* ReTwitter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ReTwitter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7A5C576A21BFF29300F6FDA5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7A5C577221BFF29300F6FDA5 /* ReTwitter.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ReTwitter.xcdatamodel; sourceTree = "<group>"; };
@@ -161,6 +163,7 @@
 			children = (
 				7A5C57B421C14CB500F6FDA5 /* HomeDatasource.swift */,
 				7A31617421C27E45001DB589 /* User.swift */,
+				7A31623321C8898F001DB589 /* Tweet.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -433,6 +436,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7A5C57B521C14CB500F6FDA5 /* HomeDatasource.swift in Sources */,
+				7A31623421C8898F001DB589 /* Tweet.swift in Sources */,
 				7A5C576B21BFF29300F6FDA5 /* AppDelegate.swift in Sources */,
 				7A31617521C27E45001DB589 /* User.swift in Sources */,
 				7A31623221C7EBB5001DB589 /* TweetCell.swift in Sources */,
