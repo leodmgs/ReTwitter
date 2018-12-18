@@ -66,6 +66,54 @@ class TweetCell: DatasourceCell {
         
         tweetTextView.anchor(self.topAnchor, left: profileImageView.rightAnchor, bottom: self.bottomAnchor, right: self.rightAnchor, topConstant: 0, leftConstant: 8, bottomConstant: 50, rightConstant: 8, widthConstant: 0, heightConstant: 0)
         
+        setupBottomTweetOptions()
+        
+    }
+    
+    fileprivate func setupBottomTweetOptions() {
+        
+        let comment = createTweetOptionView(buttonImage: UIImage(named: "comment")!)
+        let retweet = createTweetOptionView(buttonImage: UIImage(named: "retweet-off")!)
+        let like = createTweetOptionView(buttonImage: UIImage(named: "like-off")!)
+        let share = createTweetOptionView(buttonImage: UIImage(named: "share")!)
+        
+        let stackView = UIStackView(arrangedSubviews: [comment, retweet, like, share])
+        stackView.backgroundColor = .yellow
+        stackView.distribution = .fillEqually
+        stackView.spacing = 10
+        
+        addSubview(stackView)
+        
+        
+        stackView.anchor(nil, left: profileImageView.rightAnchor, bottom: self.bottomAnchor, right: self.rightAnchor, topConstant: 0, leftConstant: 8, bottomConstant: 8, rightConstant: 12, widthConstant: 0, heightConstant: 16)
+        
+    }
+    
+    fileprivate func createTweetOptionView(buttonImage: UIImage) -> UIView {
+        let view = UIView()
+        
+        let tweetImage: UIImageView = {
+            let imageView = UIImageView()
+            imageView.image = buttonImage
+            imageView.contentMode = .scaleAspectFit
+            return imageView
+        }()
+        
+        let tweetTextCount: UILabel = {
+            let label = UILabel()
+            let attributedText = NSMutableAttributedString(string: "123", attributes:  [NSAttributedString.Key.foregroundColor: UIColor.gray, NSAttributedString.Key.font: UIFont.systemFont(ofSize: 12)])
+            label.attributedText = attributedText
+            return label
+        }()
+        
+        view.addSubview(tweetImage)
+        view.addSubview(tweetTextCount)
+        
+        tweetImage.anchor(nil, left: view.leftAnchor, bottom: view.bottomAnchor, right: nil, topConstant: 0, leftConstant: 0, bottomConstant: 0, rightConstant: 0, widthConstant: 28, heightConstant: 16)
+        
+        tweetTextCount.anchor(nil, left: tweetImage.rightAnchor, bottom: view.bottomAnchor, right: nil, topConstant: 0, leftConstant: 0, bottomConstant: 0, rightConstant: 0, widthConstant: 28, heightConstant: 16)
+        
+        return view
     }
     
 }
