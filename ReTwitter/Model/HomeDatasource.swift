@@ -10,12 +10,6 @@ import LBTAComponents
 import TRON
 import SwiftyJSON
 
-class HomeDatasourceJSONError: JSONDecodable {
-    required init(json: JSON) throws {
-        //@TODO
-    }
-}
-
 class HomeDatasource: Datasource, JSONDecodable {
     
     var users: [User] = []
@@ -74,6 +68,12 @@ class HomeDatasource: Datasource, JSONDecodable {
     
     override func footerClasses() -> [DatasourceCell.Type]? {
         return [FooterCell.self]
+    }
+    
+    class HomeDatasourceJSONError: JSONDecodable {
+        required init(json: JSON) throws {
+            //@TODO
+        }
     }
     
 }

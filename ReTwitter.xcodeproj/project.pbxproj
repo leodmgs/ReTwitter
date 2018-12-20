@@ -13,6 +13,7 @@
 		7A31617921C61686001DB589 /* HomeDatasourceController+navbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A31617821C61686001DB589 /* HomeDatasourceController+navbar.swift */; };
 		7A31623221C7EBB5001DB589 /* TweetCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A31623121C7EBB5001DB589 /* TweetCell.swift */; };
 		7A31623421C8898F001DB589 /* Tweet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A31623321C8898F001DB589 /* Tweet.swift */; };
+		7A31623A21CC4D74001DB589 /* HomeService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A31623921CC4D74001DB589 /* HomeService.swift */; };
 		7A5C576B21BFF29300F6FDA5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A5C576A21BFF29300F6FDA5 /* AppDelegate.swift */; };
 		7A5C577321BFF29300F6FDA5 /* ReTwitter.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 7A5C577121BFF29300F6FDA5 /* ReTwitter.xcdatamodeld */; };
 		7A5C577521BFF29600F6FDA5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7A5C577421BFF29600F6FDA5 /* Assets.xcassets */; };
@@ -54,6 +55,7 @@
 		7A31617821C61686001DB589 /* HomeDatasourceController+navbar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HomeDatasourceController+navbar.swift"; sourceTree = "<group>"; };
 		7A31623121C7EBB5001DB589 /* TweetCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TweetCell.swift; sourceTree = "<group>"; };
 		7A31623321C8898F001DB589 /* Tweet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tweet.swift; sourceTree = "<group>"; };
+		7A31623921CC4D74001DB589 /* HomeService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeService.swift; sourceTree = "<group>"; };
 		7A5C576721BFF29300F6FDA5 /* ReTwitter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ReTwitter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7A5C576A21BFF29300F6FDA5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7A5C577221BFF29300F6FDA5 /* ReTwitter.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ReTwitter.xcdatamodel; sourceTree = "<group>"; };
@@ -103,6 +105,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7A31623821CC4D36001DB589 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				7A31623921CC4D74001DB589 /* HomeService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
 		7A5C575E21BFF29300F6FDA5 = {
 			isa = PBXGroup;
 			children = (
@@ -128,6 +138,7 @@
 		7A5C576921BFF29300F6FDA5 /* ReTwitter */ = {
 			isa = PBXGroup;
 			children = (
+				7A31623821CC4D36001DB589 /* Services */,
 				7A5C57AD21C1360B00F6FDA5 /* Controller */,
 				7A5C57AB21C135FC00F6FDA5 /* View */,
 				7A5C57AA21C135F600F6FDA5 /* Model */,
@@ -449,6 +460,7 @@
 				7A5C57A921C1346D00F6FDA5 /* HomeDatasourceController.swift in Sources */,
 				7A5C57B321C14CAE00F6FDA5 /* HeaderFooterCell.swift in Sources */,
 				7A31617921C61686001DB589 /* HomeDatasourceController+navbar.swift in Sources */,
+				7A31623A21CC4D74001DB589 /* HomeService.swift in Sources */,
 				7A5C577321BFF29300F6FDA5 /* ReTwitter.xcdatamodeld in Sources */,
 				7A31617721C286A4001DB589 /* UserCell.swift in Sources */,
 			);
