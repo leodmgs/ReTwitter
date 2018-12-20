@@ -18,5 +18,6 @@ target 'ReTwitter' do
   end
 
   pod 'LBTAComponents'
+  pod 'TRON', '~> 4.0'
 
 end
