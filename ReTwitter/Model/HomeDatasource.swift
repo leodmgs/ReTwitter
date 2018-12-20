@@ -7,30 +7,43 @@
 //
 
 import LBTAComponents
+import TRON
+import SwiftyJSON
 
-class HomeDatasource: Datasource {
+class HomeDatasourceJSONError: JSONDecodable {
+    required init(json: JSON) throws {
+        //@TODO
+    }
+}
+
+class HomeDatasource: Datasource, JSONDecodable {
     
-    let users: [User] = {
-        let steve = User(profileImage: UIImage(named: "steve-jobs")!, name: "Steve Jobs", username: "@stevejobs", bio: "Design is not just what it looks like and feels like. Design is how it works.\nInnovation distinguishes between a leader and a follower.")
-        
-        let stephen = User(profileImage: UIImage(named: "stephen-hawking")!, name: "Stephen Hawking", username: "@stephenhawking", bio: "Life would be tragic if it weren't funny.I have noticed even people who claim everything is predestined, and that we can do nothing to change it, look before they cross the road.")
-        
-        let elon = User(profileImage: UIImage(named: "elon-musk")!, name: "Elon Musk", username: "@elonmusk", bio: "When something is important enough, you do it even if the odds are not in your favor.")
-        
-        return [steve, stephen, elon]
-    }()
+    var users: [User] = []
+    var tweets: [Tweet] = []
     
-    let tweets: [Tweet] = {
-        let leonardo = User(profileImage: UIImage(named: "leonardo-domingues")!, name: "Leonardo Domingues", username: "@leodmgs", bio: "")
-        let message1 = "The report adds new details to the portrait that has emerged over the last two years of the energy and imagination of the Russian effort to sway American opinion and divide the country, which the authors said continues to this day."
-        let tweet1 = Tweet(user: leonardo, message: message1)
-        
-        let neil = User(profileImage: UIImage(named: "neil-degrasse")!, name: "Neil deGrasse", username: "@neildegrasse", bio: "")
-        let message2 = "The second report was written by the Computational Propaganda Project at Oxford University along with Graphika, a company that specializes in analyzing social media. The Washington Post first reported on the Oxford report on Sunday."
-        let tweet2 = Tweet(user: neil, message: message2)
-        
-        return [tweet1, tweet2]
-    }()
+    required init(json: JSON) throws {
+        super.init()
+        self.setupUsers(json: json)
+        self.setupTweets(json: json)
+    }
+    
+    fileprivate func setupUsers(json: JSON) {
+        let usersResponse = json["users"].array
+        for userObject in usersResponse! {
+            let user = User(profileImage: UIImage(named: "default")!, name: userObject["name"].stringValue, username: userObject["username"].stringValue, bio: userObject["bio"].stringValue)
+            self.users.append(user)
+        }
+    }
+    
+    fileprivate func setupTweets(json: JSON) {
+        let tweetsResponse = json["tweets"].array
+        for tweetObject in tweetsResponse! {
+            let user = User(profileImage: UIImage(named: "default")!, name: tweetObject["user"]["name"].stringValue, username: tweetObject["user"]["username"].stringValue, bio: tweetObject["user"]["bio"].stringValue)
+            let message = tweetObject["message"].stringValue
+            let tweet = Tweet(user: user, message: message)
+            tweets.append(tweet)
+        }
+    }
     
     override func numberOfItems(_ section: Int) -> Int {
         return section == 0 ? users.count : tweets.count

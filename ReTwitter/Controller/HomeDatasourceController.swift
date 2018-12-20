@@ -7,8 +7,12 @@
 //
 
 import LBTAComponents
+import TRON
+import SwiftyJSON
 
 class HomeDatasourceController: DatasourceController {
+    
+    let tron = TRON(baseURL: "http://api.letsbuildthatapp.com")
     
     override func willTransition(to newCollection: UITraitCollection, with coordinator: UIViewControllerTransitionCoordinator) {
         collectionViewLayout.invalidateLayout()
@@ -16,13 +20,19 @@ class HomeDatasourceController: DatasourceController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        fetchHomeDatasourceFromAPI()
         collectionView.backgroundColor = UIColor.init(r: 230, g: 230, b: 230)
         setNavigationBarItems()
-        let homeDatasource = HomeDatasource()
-        self.datasource = homeDatasource
     }
     
-    private func setNavigationBarItems() {
+    fileprivate func fetchHomeDatasourceFromAPI() {
+        let request: APIRequest<HomeDatasource, HomeDatasourceJSONError> = tron.swiftyJSON.request("twitter/home")
+        _ = request.perform(withSuccess: { (homeDatasource) in
+            self.datasource = homeDatasource
+        }) { (error) in }
+    }
+    
+    fileprivate func setNavigationBarItems() {
         if let navBar = navigationController?.navigationBar {
             navBar.barTintColor = UIColor.white
             navBar.isTranslucent = false
