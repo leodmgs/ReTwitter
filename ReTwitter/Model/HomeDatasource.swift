@@ -17,25 +17,11 @@ class HomeDatasource: Datasource, JSONDecodable {
     
     required init(json: JSON) throws {
         super.init()
-        self.setupUsers(json: json)
-        self.setupTweets(json: json)
-    }
-    
-    fileprivate func setupUsers(json: JSON) {
-        let usersResponse = json["users"].array
-        for userObject in usersResponse! {
-            let user = User(profileImage: UIImage(named: "default")!, name: userObject["name"].stringValue, username: userObject["username"].stringValue, bio: userObject["bio"].stringValue)
-            self.users.append(user)
+        if let usersResponse = json["users"].array {
+            self.users = usersResponse.map{User(json: $0)}
         }
-    }
-    
-    fileprivate func setupTweets(json: JSON) {
-        let tweetsResponse = json["tweets"].array
-        for tweetObject in tweetsResponse! {
-            let user = User(profileImage: UIImage(named: "default")!, name: tweetObject["user"]["name"].stringValue, username: tweetObject["user"]["username"].stringValue, bio: tweetObject["user"]["bio"].stringValue)
-            let message = tweetObject["message"].stringValue
-            let tweet = Tweet(user: user, message: message)
-            tweets.append(tweet)
+        if let tweetsResponse = json["tweets"].array {
+            self.tweets = tweetsResponse.map{Tweet(json: $0)}
         }
     }
     
