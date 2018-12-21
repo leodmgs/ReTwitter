@@ -57,7 +57,14 @@ class UserCell: DatasourceCell {
     override var datasourceItem: Any? {
         didSet {
             guard let user = datasourceItem as? User else { return }
-            profileImageView.image = user.profileImage
+            HomeService.shared.downloadImage(url: user.profileImageUrl) { (image, error) in
+                if error != nil {
+                    return
+                }
+                if let imageFetched = image {
+                    self.profileImageView.image = imageFetched
+                }
+            }
             nameLabel.text = user.name
             usernameLabel.text = user.username
             bioTextView.text = user.bio

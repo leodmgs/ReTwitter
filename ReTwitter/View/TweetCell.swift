@@ -13,7 +13,15 @@ class TweetCell: DatasourceCell {
     override var datasourceItem: Any?  {
         didSet {
             guard let tweet = datasourceItem as? Tweet else { return }
-            profileImageView.image = tweet.user.profileImage
+            
+            HomeService.shared.downloadImage(url: tweet.user.profileImageUrl) { (image, error) in
+                if error != nil {
+                    return
+                }
+                if let imageFetched = image {
+                    self.profileImageView.image = imageFetched
+                }
+            }
             
             let attributedString = NSMutableAttributedString(string: tweet.user.name, attributes: [NSAttributedString.Key.font : UIFont.boldSystemFont(ofSize: 15)])
             let username = "  \(tweet.user.username)\n"

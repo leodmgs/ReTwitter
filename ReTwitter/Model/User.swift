@@ -11,6 +11,7 @@ import SwiftyJSON
 
 struct User {
     let profileImage: UIImage
+    let profileImageUrl: String
     let name: String
     let username: String
     let bio: String
@@ -19,6 +20,7 @@ struct User {
         self.name = json["name"].stringValue
         self.username = json["username"].stringValue
         self.bio = json["bio"].stringValue
+        self.profileImageUrl = json["profileImageUrl"].stringValue
         self.profileImage = UIImage(named: "default")!
     }
 }
