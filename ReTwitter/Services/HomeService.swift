@@ -18,13 +18,19 @@ struct HomeService {
     
     fileprivate init() {}
     
-    func fetchDatasource(path: String, completion: @escaping (HomeDatasource) -> ()) {
-        let request: APIRequest<HomeDatasource, HomeDatasource.HomeDatasourceJSONError> = tron.swiftyJSON.request(path)
+    func fetchDatasource(path: String, completion: @escaping (HomeDatasource?, Error?) -> ()) {
+        let request: APIRequest<HomeDatasource, JSONError> = tron.swiftyJSON.request(path)
         _ = request.perform(withSuccess: { (homeDatasource) in
-            completion(homeDatasource)
-        }, failure: { (homeDatasourceJSONError) in
-            print("Fetch has failed.\n\(homeDatasourceJSONError)")
+            completion(homeDatasource, nil)
+        }, failure: { (jsonError) in
+            completion(nil, jsonError)
         })
+    }
+    
+    class JSONError: JSONDecodable {
+        required init(json: JSON) throws {
+            //@MARK
+        }
     }
     
 }

@@ -17,12 +17,11 @@ class HomeDatasource: Datasource, JSONDecodable {
     
     required init(json: JSON) throws {
         super.init()
-        if let usersResponse = json["users"].array {
-            self.users = usersResponse.map{User(json: $0)}
+        guard let usersResponse = json["users"].array, let tweetsResponse = json["tweets"].array else {
+            throw NSError(domain: "com.retwitter", code: 1, userInfo: [NSLocalizedDescriptionKey: "Error while parsing JSON"])
         }
-        if let tweetsResponse = json["tweets"].array {
-            self.tweets = tweetsResponse.map{Tweet(json: $0)}
-        }
+        self.users = usersResponse.map{User(json: $0)}
+        self.tweets = tweetsResponse.map{Tweet(json: $0)}
     }
     
     override func numberOfItems(_ section: Int) -> Int {
@@ -54,12 +53,6 @@ class HomeDatasource: Datasource, JSONDecodable {
     
     override func footerClasses() -> [DatasourceCell.Type]? {
         return [FooterCell.self]
-    }
-    
-    class HomeDatasourceJSONError: JSONDecodable {
-        required init(json: JSON) throws {
-            //@TODO
-        }
     }
     
 }

@@ -7,8 +7,18 @@
 //
 
 import LBTAComponents
+import TRON
 
 class HomeDatasourceController: DatasourceController {
+    
+    let errorLabel: UILabel = {
+        let label = UILabel()
+        label.text = "Oops! Something was wrong while loading the data. Please try again later..."
+        label.numberOfLines = 0
+        label.textAlignment = .center
+        label.isHidden = true
+        return label
+    }()
     
     override func willTransition(to newCollection: UITraitCollection, with coordinator: UIViewControllerTransitionCoordinator) {
         collectionViewLayout.invalidateLayout()
@@ -16,9 +26,20 @@ class HomeDatasourceController: DatasourceController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        super.view.addSubview(errorLabel)
+        
+        errorLabel.anchor(self.view.topAnchor, left: self.view.leftAnchor, bottom: self.view.bottomAnchor, right: self.view.rightAnchor, topConstant: 0, leftConstant: 20, bottomConstant: 0, rightConstant: 20, widthConstant: 0, heightConstant: 0)
+        
         collectionView.backgroundColor = UIColor.init(r: 230, g: 230, b: 230)
         setNavigationBarItems()
-        HomeService.shared.fetchDatasource(path: "twitter/home", completion: { homeDatasource in
+        HomeService.shared.fetchDatasource(path: "twitter/home", completion: { (homeDatasource, error) in
+            if let error = error {
+                if let apiError = error as? APIError<HomeService.JSONError> {
+                    print("\(String(describing: apiError.response?.statusCode))")
+                }
+                self.errorLabel.isHidden = false
+                return
+            }
             self.datasource = homeDatasource
         })
     }
