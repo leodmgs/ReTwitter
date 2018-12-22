@@ -76,15 +76,18 @@ class HomeDatasourceController: DatasourceController {
     }
     
     override func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        if let userCell = datasource?.item(indexPath) as? User {
+        switch indexPath.section {
+        case 0:
+            guard let userCell = datasource?.item(indexPath) as? User else { return .zero }
             let estimatedProfileSize = estimatedBoundingTextViewSize(text: userCell.bio, offset: 66)
             return estimatedProfileSize
-        }
-        else if let tweetCell = datasource?.item(indexPath) as? Tweet {
+        case 1:
+            guard let tweetCell = datasource?.item(indexPath) as? Tweet else { return .zero }
             let estimatedTweetSize = estimatedBoundingTextViewSize(text: tweetCell.message, offset: 78)
             return estimatedTweetSize
+        default:
+            return CGSize(width: view.frame.width, height: 200)
         }
-        return CGSize(width: view.frame.width, height: 200)
     }
     
     fileprivate func estimatedBoundingTextViewSize(text: String, offset: CGFloat = 0) -> CGSize {
