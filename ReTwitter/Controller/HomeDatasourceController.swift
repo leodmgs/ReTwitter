@@ -77,13 +77,22 @@ class HomeDatasourceController: DatasourceController {
     
     override func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         if let userCell = datasource?.item(indexPath) as? User {
-            let userTextBioWidth = view.frame.width - 82
-            let size = CGSize(width: userTextBioWidth, height: 500)
-            let fontAttributes = [NSAttributedString.Key.font: UIFont.systemFont(ofSize: 16)]
-            let boundingBoxSize = NSString(string: userCell.bio).boundingRect(with: size, options: .usesLineFragmentOrigin, attributes: fontAttributes, context: nil)
-            return CGSize(width: view.frame.width, height: boundingBoxSize.height + 66)
+            let estimatedProfileSize = estimatedBoundingTextViewSize(text: userCell.bio, offset: 66)
+            return estimatedProfileSize
+        }
+        else if let tweetCell = datasource?.item(indexPath) as? Tweet {
+            let estimatedTweetSize = estimatedBoundingTextViewSize(text: tweetCell.message, offset: 78)
+            return estimatedTweetSize
         }
         return CGSize(width: view.frame.width, height: 200)
+    }
+    
+    fileprivate func estimatedBoundingTextViewSize(text: String, offset: CGFloat = 0) -> CGSize {
+        let textViewFrameWidth = view.frame.width - 82
+        let textViewFrameSize = CGSize(width: textViewFrameWidth, height: 1000)
+        let fontAttributes = [NSAttributedString.Key.font: UIFont.systemFont(ofSize: 16)]
+        let boundingSize = NSString(string: text).boundingRect(with: textViewFrameSize, options: .usesLineFragmentOrigin, attributes: fontAttributes, context: nil)
+        return CGSize(width: view.frame.width, height: boundingSize.height + offset)
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {

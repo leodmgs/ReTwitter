@@ -39,6 +39,8 @@ class TweetCell: DatasourceCell {
         }
     }
     
+    let tweetOptionsStackView = UIStackView(arrangedSubviews: [])
+    
     let profileImageView: UIImageView = {
         let imageView = UIImageView()
         imageView.layer.cornerRadius = 5
@@ -52,49 +54,40 @@ class TweetCell: DatasourceCell {
         return textView
     }()
     
-//    let postImageView: UIImageView = {
-//        let imageView = UIImageView()
-//        imageView.contentMode = .scaleAspectFit
-//        imageView.image = UIImage(named: "apple-store")
-//        return imageView
-//    }()
-    
     override func setupViews() {
         super.setupViews()
+        backgroundColor = .white
         
-        backgroundColor = UIColor.white
         separatorLineView.isHidden = false
         separatorLineView.backgroundColor = UIColor(r: 230, g: 230, b: 230)
         
         addSubview(profileImageView)
         addSubview(tweetTextView)
-//        addSubview(postImageView)
+        addSubview(tweetOptionsStackView)
         
         profileImageView.anchor(self.topAnchor, left: self.leftAnchor, bottom: nil, right: nil, topConstant: 12, leftConstant: 12, bottomConstant: 0, rightConstant: 0, widthConstant: 50, heightConstant: 50)
         
-        tweetTextView.anchor(self.topAnchor, left: profileImageView.rightAnchor, bottom: self.bottomAnchor, right: self.rightAnchor, topConstant: 0, leftConstant: 8, bottomConstant: 50, rightConstant: 8, widthConstant: 0, heightConstant: 0)
+        tweetTextView.anchor(self.topAnchor, left: profileImageView.rightAnchor, bottom: self.tweetOptionsStackView.topAnchor, right: self.rightAnchor, topConstant: 8, leftConstant: 8, bottomConstant: 8, rightConstant: 8, widthConstant: 0, heightConstant: 0)
         
         setupBottomTweetOptions()
+        
+        tweetOptionsStackView.anchor(nil, left: profileImageView.rightAnchor, bottom: self.bottomAnchor, right: self.rightAnchor, topConstant: 0, leftConstant: 8, bottomConstant: 8, rightConstant: 8, widthConstant: 0, heightConstant: 16)
         
     }
     
     fileprivate func setupBottomTweetOptions() {
-        
         let comment = createTweetOptionView(buttonImage: UIImage(named: "comment")!)
         let retweet = createTweetOptionView(buttonImage: UIImage(named: "retweet-off")!)
         let like = createTweetOptionView(buttonImage: UIImage(named: "like-off")!)
         let share = createTweetOptionView(buttonImage: UIImage(named: "share")!)
         
-        let stackView = UIStackView(arrangedSubviews: [comment, retweet, like, share])
-        stackView.backgroundColor = .yellow
-        stackView.distribution = .fillEqually
-        stackView.spacing = 10
+        tweetOptionsStackView.addArrangedSubview(comment)
+        tweetOptionsStackView.addArrangedSubview(retweet)
+        tweetOptionsStackView.addArrangedSubview(like)
+        tweetOptionsStackView.addArrangedSubview(share)
         
-        addSubview(stackView)
-        
-        
-        stackView.anchor(nil, left: profileImageView.rightAnchor, bottom: self.bottomAnchor, right: self.rightAnchor, topConstant: 0, leftConstant: 8, bottomConstant: 8, rightConstant: 12, widthConstant: 0, heightConstant: 16)
-        
+        tweetOptionsStackView.distribution = .fillEqually
+        tweetOptionsStackView.spacing = 10
     }
     
     fileprivate func createTweetOptionView(buttonImage: UIImage) -> UIView {
