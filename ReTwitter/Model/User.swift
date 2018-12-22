@@ -8,8 +8,9 @@
 
 import UIKit
 import SwiftyJSON
+import TRON
 
-struct User {
+struct User: JSONDecodable {
     let profileImage: UIImage
     let profileImageUrl: String
     let name: String
